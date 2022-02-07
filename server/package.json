@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "npx ts-node --files ./server.ts --watch",
+    "build": "npx tsc",
+    "start": "node ./build/server.js",
+    "gen-schema": "npx gql2ts ./graphql/typeDefs.graphql -o ./graphql/schema.d.ts --ignore-type-name-declaration"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  },
+  "devDependencies": {
+    "gql2ts": "^1.10.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
